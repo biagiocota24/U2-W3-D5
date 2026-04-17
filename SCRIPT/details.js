@@ -1,10 +1,9 @@
 const apiLink = "https://striveschool-api.herokuapp.com/api/product/";
 const myKey = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWUxZjQ3NzczOWY4NzAwMTU3YWIwYTIiLCJpYXQiOjE3NzY0MTU4NjMsImV4cCI6MTc3NzYyNTQ2M30.D60gNCqp-CYWG2Luaj_xp_-8l3n-K_7U_k67PZytfs0";
-
 const allTheParams = new URLSearchParams(location.search);
 const watchId = allTheParams.get("id");
 
-console.log(watchId);
+document.getElementById("custom-link").setAttribute("href" , `./backoffice.html?id=${watchId}`)
 
 fetch(apiLink + watchId, {
   headers: {
@@ -53,6 +52,7 @@ fetch(apiLink + watchId, {
         .catch((error) => {
           console.log("errore nel caricamento", error);
         });
+        location.assign("homepage.html")
     });
   })
   .catch((error) => {

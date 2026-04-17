@@ -11,12 +11,16 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="d-flex flex-column" style="min-height: 100vh;" data-bs-theme="dark">
+  <body class="d-flex flex-column" style="min-height: 100vh" data-bs-theme="dark">
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="https://img.freepik.com/vettori-premium/orologio-vintage-illustrazione-del-design-del-logo-per-l-azienda-di-orologi-combina-elementi-classici-e-moderni_553722-1070.jpg" alt="logo" style="width: 80px; border-radius: 50%;">
+            <img
+              src="https://img.freepik.com/vettori-premium/orologio-vintage-illustrazione-del-design-del-logo-per-l-azienda-di-orologi-combina-elementi-classici-e-moderni_553722-1070.jpg"
+              alt="logo"
+              style="width: 80px; border-radius: 50%"
+            />
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,16 +34,12 @@
                 <a class="nav-link" href="./backoffice.html">Create new product</a>
               </li>
               <li class="nav-item text-center">
-                <a class="nav-link" href="#">Custom your product</a>
+                <a class="nav-link" id="custom-link">Custom your product</a>
               </li>
-              <li class="nav-item text-center ">
+              <li class="nav-item text-center">
                 <a class="nav-link active" href="#">Details</a>
               </li>
             </ul>
-            <!-- <div class="form-check form-switch mx-3">
-              <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch" switch />
-              <label class="form-check-label" for="checkNativeSwitch"> Theme</label>
-            </div> -->
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
               <button type="button" class="btn btn-outline-warning">Search</button>
@@ -49,14 +49,29 @@
       </nav>
     </header>
     <main class="flex-grow-1">
-        <div class="container">
-            <div class="row justify-content-center" id="detail-wrapper">
-
+      <div class="container my-5">
+        <div class="row justify-content-center" id="detail-wrapper">
+          <div class="card col-12 col-md-6 col-lg-4 " aria-hidden="true" style="height: 400px;">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title placeholder-glow">
+                <span class="placeholder col-6"></span>
+              </h5>
+              <p class="card-text placeholder-glow">
+                <span class="placeholder col-7"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-6"></span>
+                <span class="placeholder col-8"></span>
+              </p>
+              <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
             </div>
+          </div>
         </div>
+      </div>
     </main>
     <footer class="bg-warning text-dark py-3 text-center">
-        <p id="data-footer" class="m-0">2026</p>
+      <p id="data-footer" class="m-0">2026</p>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
