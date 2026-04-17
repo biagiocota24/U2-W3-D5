@@ -29,7 +29,7 @@ fetch(apiLink + watchId, {
             <p class="card-text">${watch.brand}</p>
             <p class="card-text">${watch.description}</p>
             <price class ="my-2 fw-bold text-black">${watch.price}€</price>
-             <a href="./homepage.html" class="btn btn-warning" id= "card-btn">See the details</a>
+             <a href="./homepage.html" class="btn btn-warning" id= "card-btn">Back to Home</a>
              <button class ="btn btn-danger mt-2 remove-btn">Remove</button>
   </div>
 </div>
