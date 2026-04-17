@@ -27,6 +27,7 @@ fetch(apiLink, {
             <price class ="my-2 fw-bold text-black">${watch.price}€</price>
              <a href="./details.html?id=${watch._id}" class="btn btn-warning" id= "card-btn">See the details</a>
              <button class ="btn btn-danger mt-2 remove-btn">Remove</button>
+             <a href = "./backoffice.html?id=${watch._id}" class ="btn btn-info mt-2 remove-btn text-light">Customise your Watch</a>
   </div>
 </div>
         `;
