@@ -1,6 +1,5 @@
 const myKey = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWUxZjQ3NzczOWY4NzAwMTU3YWIwYTIiLCJpYXQiOjE3NzY0MTU4NjMsImV4cCI6MTc3NzYyNTQ2M30.D60gNCqp-CYWG2Luaj_xp_-8l3n-K_7U_k67PZytfs0";
 const apiLink = "https://striveschool-api.herokuapp.com/api/product/";
-
 const allTheParams = new URLSearchParams(location.search);
 const watchID = allTheParams.get("id");
 
@@ -76,6 +75,14 @@ form.addEventListener("submit", function (e) {
     });
 });
 
+const clearBtn = document.getElementById("form-clear-btn")
+localStorage.getItem(showToast)
+clearBtn.addEventListener("click" , function(e){
+  e.preventDefault()
+  form.reset()
+  showToast()
+})
+
 class product {
   constructor(_name, _description, _brand, _imageURL, _price) {
     this.name = _name;
@@ -85,3 +92,6 @@ class product {
     this.price = _price;
   }
 }
+
+
+

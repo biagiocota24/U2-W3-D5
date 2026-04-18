@@ -12,7 +12,7 @@
     />
   </head>
   <body class="d-flex flex-column" style="min-height: 100vh" data-bs-theme="dark">
-    <header>
+    <header class="position-sticky top-0 z-1">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -38,6 +38,7 @@
               <input class="form-control me-2" type="search" placeholder="Search" id="search-bar" aria-label="Search" />
               <button type="button" class="btn btn-outline-warning" id="search-btn">Search</button>
             </form>
+            <button class="btn btn-outline-secondary ms-2" id="theme-toggle">🌙 Dark</button>
           </div>
         </div>
       </nav>
@@ -242,13 +243,23 @@
       </div>
     </main>
     <footer class="bg-warning text-dark py-3 text-center">
-      <p id="data-footer" class="m-0">2026</p>
+      <p id="data-footer" class="m-0"></p>
     </footer>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="myToast" class="toast" role="alert">
+        <div class="toast-header">
+          <strong class="me-auto">Avviso</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body" id="toast-message"></div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="./SCRIPT/theme.js"></script>
     <script src="./SCRIPT/homepage.js"></script>
   </body>
 </html>

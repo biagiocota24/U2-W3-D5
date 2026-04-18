@@ -3,7 +3,7 @@ const myKey = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWUxZjQ3N
 const allTheParams = new URLSearchParams(location.search);
 const watchId = allTheParams.get("id");
 
-document.getElementById("custom-link").setAttribute("href" , `./backoffice.html?id=${watchId}`)
+document.getElementById("custom-link").setAttribute("href", `./backoffice.html?id=${watchId}`);
 
 fetch(apiLink + watchId, {
   headers: {
@@ -52,9 +52,10 @@ fetch(apiLink + watchId, {
         .catch((error) => {
           console.log("errore nel caricamento", error);
         });
-        location.assign("homepage.html")
+      location.assign("homepage.html");
     });
   })
   .catch((error) => {
     console.log("problemi di caricamento", error);
   });
+
